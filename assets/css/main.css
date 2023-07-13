@@ -302,6 +302,7 @@ img {
 .ds-button:hover {
   background-color: #F26464;
   color: #FFF;
+  animation: colorAnimation 2s infinite;
 }
 
 .ds-arrow-button i {
@@ -314,6 +315,7 @@ img {
 ----------------------------------------------------------------*/
 .ds-skills-section {
   padding-bottom: 105px;
+  animation: colorAnimation 2s infinite;
 }
 
 .ds-skills-list {
@@ -342,6 +344,9 @@ img {
 /*-----------------------------------------------------------------
   5. >>> Experience Style
 ----------------------------------------------------------------*/
+
+
+
 .ds-experience-section {
   padding-bottom: 120px;
 }
@@ -731,6 +736,7 @@ span.ds-department {
 
   .ds-work-list {
     padding: 30px;
+    border-top: 1px solid gray;
   }
 
   .ds-work-list p {
@@ -799,4 +805,97 @@ span.ds-department {
   }
 
 
+}
+
+
+/* EDUCATION  */
+
+.education-section {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 20px 0;
+  margin: 2rem auto 0;
+}
+
+/* @media (max-width: 1380px) */
+
+.education-roundedimg {
+  /* object-fit: cover; */
+  margin-right: 2rem;
+  width: 5rem;
+  height: 5rem;
+  /* box-shadow: 0 0.5rem 1rem rgba(0,0,0,.3); */
+  /* border-radius: 30%; */
+}
+
+.education-text-school {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 700;
+  text-overflow: ellipsis;
+  /* overflow: hidden; */
+  white-space: nowrap;
+  height: 27px;
+}
+
+.education-text-subHeader {
+  color: #000;
+  font-weight: 700;
+  font-size: 19px;
+  margin: 0;
+  padding-top: .8rem;
+  line-height: normal;
+}
+
+.education-text-duration {
+  color: #000;
+  font-size: 19px;
+  margin: 0;
+  padding-top: .5rem;
+}
+
+.education-text-desc {
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+  font-size: 16px;
+  line-height: normal;
+}
+
+.education-card {
+  flex-direction: column;
+  padding-bottom: 10px;
+  display: flex;
+  /* flex-direction: row; */
+}
+
+.education-text-bullets {
+  content: "";
+  display: block;
+  border-top: 1px solid gray;
+  margin-bottom: 10px;
+  transition: transform 0.5s;
+  transform-origin: right;
+}
+
+
+.education-card:hover .education-text-bullets {
+  /* border-color: blue; */
+  animation: colorAnimation 5s infinite;
+  /* Add any other styles you want */
+}
+@keyframes colorAnimation {
+  0% { border-color: blue; }
+  25% { border-color: rgb(216, 128, 128); }
+  50% { border-color: gray; }
+  75%{ border-color: green; }
+  100% { border-color: skyblue; }
+}
+
+.ds-heading:hover{
+  animation: colorAnimation 2s infinite;
+}
+
+.ds-skills-list:hover{
+  animation: colorAnimation 2s infinite;
 }
